@@ -90,7 +90,15 @@ const LiveFlightCard = () => (
     <div className="space-y-4">
       <div className="relative">
         <div className="h-1 bg-white/10 rounded-full">
-          <div className="h-full w-3/4 bg-gradient-to-r from-[#7C5DFA] to-accent-blue rounded-full" />
+          <div className="h-full w-3/4 bg-gradient-to-r from-[#7C5DFA] to-accent-blue rounded-full relative">
+            <div 
+              className="absolute -right-2 -top-[11.2px] animate-pulse text-white"
+              style={{ transform: 'rotate(0deg)' }}
+            >
+              ✈
+            </div>
+            <div className="absolute -right-4 top-1/2 -translate-y-1/2 w-8 h-8 bg-[#7C5DFA] blur-lg opacity-50" />
+          </div>
         </div>
         <div className="flex justify-between text-sm text-gray-400 mt-2">
           <span>JFK</span>
