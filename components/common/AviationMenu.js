@@ -15,6 +15,14 @@ const MenuIcon = () => (
 export default function AviationMenu() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const menuItems = [
+    { name: 'Home', href: '/' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Features', href: '/features' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Contact', href: '/contact' },
+  ];
+
   return (
     <div className="relative">
       {/* Menu Button */}
@@ -23,70 +31,68 @@ export default function AviationMenu() {
         className="relative z-50 p-1.5 text-white hover:text-[#7C5DFA] transition-colors"
         aria-label="Menu"
       >
-        <div className={`transform transition-all duration-300 ${isOpen ? 'rotate-90' : ''}`}>
+        <div className={`transform transition-all duration-300 ${isOpen ? 'rotate-180' : ''}`}>
           <MenuIcon />
         </div>
       </button>
 
+      {/* Dropdown Menu */}
+      <div 
+        className={`
+          fixed left-0 right-0 bg-[#0A0A0B] border-b border-white/10
+          transform transition-all duration-500 ease-out origin-top
+          ${isOpen 
+            ? 'opacity-100 translate-y-0 pointer-events-auto' 
+            : 'opacity-0 -translate-y-full pointer-events-none'
+          }
+          z-40 shadow-xl
+        `}
+      >
+        <nav className="max-w-7xl mx-auto px-4 py-6">
+          <ul className="space-y-3">
+            {menuItems.map((item) => (
+              <li key={item.name}>
+                <Link 
+                  href={item.href}
+                  className="text-gray-300 hover:text-white transition-colors py-2 flex items-center text-sm group"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#7C5DFA] mr-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          {/* Auth Buttons */}
+          <div className="flex items-center gap-3 mt-6 pt-6 border-t border-white/10">
+            <Link 
+              href="/auth/login"
+              className="flex-1 text-center text-gray-300 hover:text-white transition-colors py-2 text-sm"
+              onClick={() => setIsOpen(false)}
+            >
+              Sign In
+            </Link>
+            <Link 
+              href="/auth/signup"
+              className="flex-1 bg-[#7C5DFA] hover:bg-[#8F75FF] transition-colors px-4 py-2 rounded-full text-white text-sm font-medium text-center"
+              onClick={() => setIsOpen(false)}
+            >
+              Sign Up
+            </Link>
+          </div>
+        </nav>
+      </div>
+
       {/* Overlay */}
       <div 
         className={`
-          fixed inset-0 bg-black/90 transition-all duration-300 z-40
+          fixed inset-0 bg-black/60 transition-opacity duration-500
           ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}
         `}
+        style={{ zIndex: 30 }}
         onClick={() => setIsOpen(false)}
       />
-
-      {/* Menu Panel */}
-      <div 
-        className={`
-          fixed top-0 right-0 h-full w-[240px] 
-          bg-[#0A0A0B]/95
-          transform transition-transform duration-300
-          border-l border-white/10 flex flex-col z-50
-          shadow-xl
-          ${isOpen ? 'translate-x-0' : 'translate-x-full'}
-        `}
-      >
-        {/* Menu Content */}
-        <div className="flex flex-col h-full">
-          {/* Header */}
-          <div className="flex items-center justify-between px-4 py-3 border-b border-white/10 bg-[#0A0A0B]">
-            <span className="text-base font-medium text-white">Menu</span>
-            <button
-              onClick={() => setIsOpen(false)}
-              className="p-1.5 text-gray-400 hover:text-white transition-colors"
-            >
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-
-          {/* Menu Items */}
-          <nav className="flex-1 p-4 bg-[#0A0A0B]/95">
-            <div className="flex flex-col gap-3">
-              <Link 
-                href="/auth/login"
-                className="text-gray-400 hover:text-white transition-colors py-2 flex items-center gap-2 border-b border-white/10 text-sm"
-                onClick={() => setIsOpen(false)}
-              >
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
-                </svg>
-                Login
-              </Link>
-              <Link 
-                href="/auth/signup"
-                className="bg-[#7C5DFA] hover:bg-[#8F75FF] transition-colors px-4 py-2 rounded-full text-white text-sm font-medium flex items-center justify-center"
-                onClick={() => setIsOpen(false)}
-              >
-                Get Started
-              </Link>
-            </div>
-          </nav>
-        </div>
-      </div>
     </div>
   );
 } 
