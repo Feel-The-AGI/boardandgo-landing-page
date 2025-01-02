@@ -100,8 +100,8 @@ function getLinksForSection(section) {
       ];
     case 'Legal':
       return [
-        { name: 'Terms & Conditions', href: '#terms' },
-        { name: 'Privacy Policy', href: '#privacy' }
+        { name: 'Terms & Conditions', href: '/legal/terms' },
+        { name: 'Privacy Policy', href: '/legal/privacy' }
       ];
     default:
       return [];
