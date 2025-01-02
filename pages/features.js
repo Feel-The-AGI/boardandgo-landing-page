@@ -92,7 +92,7 @@ const LiveFlightCard = () => (
         <div className="h-1 bg-white/10 rounded-full">
           <div className="h-full w-3/4 bg-gradient-to-r from-[#7C5DFA] to-accent-blue rounded-full relative">
             <div 
-              className="absolute -right-2 -top-[11.2px] animate-pulse text-white"
+              className="absolute -right-2 -top-[11.1px] animate-pulse text-white"
               style={{ transform: 'rotate(0deg)' }}
             >
               ✈
