@@ -47,7 +47,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          {['Company', 'Product', 'Help Center'].map((section) => (
+          {['Company', 'Product', 'Help Center', 'Legal'].map((section) => (
             <div key={section} className="col-span-1">
               <h4 className="text-sm font-semibold uppercase tracking-wider mb-4 gradient-text">
                 {section}
@@ -95,10 +95,13 @@ function getLinksForSection(section) {
       ];
     case 'Help Center':
       return [
-        { name: 'Support', href: '#' },
-        { name: 'Terms', href: '#' },
-        { name: 'Privacy', href: '#' },
-        { name: 'Cookie Policy', href: '#' }
+        { name: 'Support', href: '/support' },
+        { name: 'Status', href: '/status' }
+      ];
+    case 'Legal':
+      return [
+        { name: 'Terms & Conditions', href: '#terms' },
+        { name: 'Privacy Policy', href: '#privacy' }
       ];
     default:
       return [];

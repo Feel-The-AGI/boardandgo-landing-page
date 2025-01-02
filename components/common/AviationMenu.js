@@ -21,6 +21,7 @@ export default function AviationMenu() {
     { name: 'Home', href: '/' },
     { name: 'Features', href: '/features' },
     { name: 'Pricing', href: '/pricing' },
+    { name: 'Support', href: '/support' },
     { name: 'About', href: '/about' },
     { name: 'Careers', href: '/careers' },
   ];
