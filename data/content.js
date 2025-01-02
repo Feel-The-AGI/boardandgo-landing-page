@@ -11,79 +11,74 @@ import {
 
 export const features = [
   {
-    title: "Real-Time Updates",
-    description: "Get instant notifications about your flight status, delays, and gate changes.",
-    icon: <BellIcon />
+    title: 'Real-Time Aircraft Tracking',
+    description: "Track your flight with 98% accuracy, from takeoff to landing. Our AI agents monitor your aircraft's location, speed, and status in real-time.",
+    icon: '✈',
   },
   {
-    title: "Interactive Maps",
-    description: "Track your flight's progress with our beautiful 3D map interface.",
-    icon: <MapIcon />
+    title: 'Smart Connection Management',
+    description: 'Never miss a connection. Our AI calculates optimal routes through terminals and alerts you about gate changes or delays.',
+    icon: <svg className="w-6 h-6 text-[#7C5DFA]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+    </svg>,
   },
   {
-    title: "Smart Predictions",
-    description: "AI-powered insights about optimal departure times and potential delays.",
-    icon: <ChartIcon />
+    title: 'Proactive AI Assistance',
+    description: 'Receive voice calls for critical updates and instant solutions for disruptions before they impact your journey.',
+    icon: <svg className="w-6 h-6 text-[#7C5DFA]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+    </svg>,
   },
   {
-    title: "Multi-Platform",
-    description: "Access your flight information from any device, anywhere.",
-    icon: <PlaneIcon />
-  }
+    title: 'Multi-Flight Monitoring',
+    description: 'Track multiple flights simultaneously. Perfect for complex itineraries and connecting flights across different airlines.',
+    icon: <svg className="w-6 h-6 text-[#7C5DFA]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
+    </svg>,
+  },
 ];
 
 export const benefits = [
   {
-    title: "Craft & Generate",
-    description: "Create content efficiently and quickly with powerful AI writing tools for optimal results.",
-    icon: <DocumentIcon />
+    title: 'Peace of Mind',
+    description: 'Our AI agents work 24/7 to monitor your flights and predict potential disruptions before they happen.',
+    icon: '🛡️',
   },
   {
-    title: "Enhanced AI Processing",
-    description: "Advanced algorithms ensure your content is accurate, engaging, and perfectly tailored.",
-    icon: <BrainIcon />
+    title: 'Time Saved',
+    description: 'Smart terminal navigation and real-time updates help you make connections efficiently.',
+    icon: '⏱️',
   },
   {
-    title: "Generate Content",
-    description: "Create high-quality content in seconds with our advanced AI technology.",
-    icon: <SpeedIcon />
+    title: 'Stress Reduced',
+    description: 'From voice calls for critical updates to instant rebooking suggestions, we handle the complexities.',
+    icon: '🧘',
   },
-  {
-    title: "Time Savings",
-    description: "Save hours of work with automated content generation and smart suggestions.",
-    icon: <ClockIcon />
-  }
 ];
 
 export const testimonials = [
   {
-    name: "Sarah Johnson",
-    role: "Frequent Traveler",
-    content: "BoardAndGo has completely transformed how I track my flights. The real-time updates are invaluable.",
-    rating: 5
+    name: 'Sarah C.',
+    role: 'Business Consultant',
+    content: "BoardAndGo's AI agents called me about my Paris connection while I was still at JFK. They had already calculated my walking time to the gate and confirmed my flight was on schedule.",
+    image: '/testimonials/sarah.jpg',
   },
   {
-    name: "Michael Chen",
-    role: "Business Executive",
-    content: "The predictive features have saved me countless hours at the airport. Highly recommended!",
-    rating: 5
+    name: 'Emma T.',
+    role: 'Digital Nomad',
+    content: "Managing four connecting flights across three continents was a breeze. The AI Agents tracked each flight and even arranged fast-track security when my connection was tight.",
+    image: '/testimonials/emma.jpg',
   },
   {
-    name: "Emma Davis",
-    role: "Travel Blogger",
-    content: "The best flight tracking app I've ever used. The UI is beautiful and the features are spot-on.",
-    rating: 5
+    name: 'James W.',
+    role: 'Software Developer',
+    content: "When my Tokyo flight was diverted, BoardAndGo's AI Agents had already arranged my hotel and rebooking before we landed. Incredible proactive service!",
+    image: '/testimonials/james.jpg',
   },
   {
-    name: "David Wilson",
-    role: "Corporate Travel Manager",
-    content: "Managing multiple flights is now effortless. The AI predictions are surprisingly accurate.",
-    rating: 5
+    name: 'Maria R.',
+    role: 'Management Consultant',
+    content: "The voice updates about my next flight while I'm still in the air are game-changing. Makes tight connections so much less stressful.",
+    image: '/testimonials/maria.jpg',
   },
-  {
-    name: "Alex Thompson",
-    role: "Digital Nomad",
-    content: "Perfect for frequent travelers. The notifications are timely and the interface is intuitive.",
-    rating: 5
-  }
 ]; 

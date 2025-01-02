@@ -369,8 +369,8 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col gap-4 max-w-xs mx-auto">
               <Link href="/auth/signup" className="w-full">
-                <button className="w-full h-[72px] bg-[#7C5DFA] hover:bg-[#8F75FF] 
-                  transition-colors rounded-[32px] text-white font-medium
+                <button className="w-full h-[56px] bg-[#7C5DFA] hover:bg-[#8F75FF] 
+                  transition-colors rounded-[28px] text-white font-medium text-sm
                   flex items-center justify-center gap-2 group"
                 >
                   Get Started Free
@@ -379,8 +379,8 @@ export default function HomePage() {
                   </span>
                 </button>
               </Link>
-              <button className="w-full h-[72px] bg-[#1E1E1E] hover:bg-[#2A2A2A] 
-                transition-colors rounded-[32px] text-white font-medium"
+              <button className="w-full h-[56px] bg-[#1E1E1E] hover:bg-[#2A2A2A] 
+                transition-colors rounded-[28px] text-white font-medium text-sm"
               >
                 Schedule Demo
               </button>
