@@ -10,6 +10,7 @@ import AviationMenu from '../components/common/AviationMenu';
 import Footer from '../components/common/Footer';
 import ScrollToTop from '../components/common/ScrollToTop';
 import BackgroundElements from '../components/common/BackgroundElements';
+import Image from 'next/image';
 
 const BluePlane = ({ className }) => (
   <svg 
@@ -178,17 +179,23 @@ export default function HomePage() {
               {/* Download Buttons */}
               <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 md:gap-8">
                 <a href="#" className="transition-all duration-300 hover:-translate-y-1 group w-[160px] xs:w-[180px] sm:w-[200px] md:w-[240px] mx-auto sm:mx-0">
-                  <img 
+                  <Image 
                     src="/icons/download-on-the-app-store.svg" 
                     alt="Download on the App Store" 
                     className="w-full h-auto group-hover:scale-105 transition-transform"
+                    width={160}
+                    height={50}
+                    priority={true}
                   />
                 </a>
                 <a href="#" className="transition-all duration-300 hover:-translate-y-1 group w-[160px] xs:w-[180px] sm:w-[200px] md:w-[240px] mx-auto sm:mx-0">
-                  <img 
+                  <Image 
                     src="/icons/download-on-the-google-play-store.svg" 
                     alt="Get it on Google Play" 
                     className="w-full h-auto group-hover:scale-105 transition-transform"
+                    width={160}
+                    height={50}
+                    priority={true}
                   />
                 </a>
               </div>
@@ -202,11 +209,14 @@ export default function HomePage() {
                 <div className="relative animate-float transform hover:scale-105 transition-transform duration-500" 
                      style={{ animationDuration: '3s', animationDelay: '0.5s' }}>
                   <div className="glass-effect rounded-[2rem] sm:rounded-[2.5rem] p-1 sm:p-2 shadow-xl">
-                    <img 
+                    <Image 
                       src="/mockups/ios-device.png" 
                       alt="BoardAndGo iOS App" 
                       className="rounded-[1.5rem] sm:rounded-[2rem] w-full max-w-[160px] sm:max-w-[220px] h-auto"
                       style={{ transform: 'rotate(-5deg)' }}
+                      width={160}
+                      height={220}
+                      priority={true}
                     />
                   </div>
                 </div>
@@ -215,11 +225,14 @@ export default function HomePage() {
                 <div className="relative animate-float transform hover:scale-105 transition-transform duration-500" 
                      style={{ animationDuration: '3.5s' }}>
                   <div className="glass-effect rounded-[2rem] sm:rounded-[2.5rem] p-1 sm:p-2 shadow-xl">
-                    <img 
+                    <Image 
                       src="/mockups/android-device.png" 
                       alt="BoardAndGo Android App" 
                       className="rounded-[1.5rem] sm:rounded-[2rem] w-full max-w-[160px] sm:max-w-[220px] h-auto"
                       style={{ transform: 'rotate(5deg)' }}
+                      width={160}
+                      height={220}
+                      priority={true}
                     />
                   </div>
                 </div>

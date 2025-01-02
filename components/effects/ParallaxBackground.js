@@ -110,7 +110,7 @@ export default function ParallaxBackground() {
 
     animate();
     return () => cancelAnimationFrame(animationFrame);
-  }, []);
+  }, [planes]);
 
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none">
