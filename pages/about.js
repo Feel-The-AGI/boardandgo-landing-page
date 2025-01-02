@@ -5,6 +5,7 @@ import AviationMenu from '../components/common/AviationMenu';
 import Footer from '../components/common/Footer';
 import ScrollToTop from '../components/common/ScrollToTop';
 import BackgroundElements from '../components/common/BackgroundElements';
+import PublicNavbar from '../components/common/PublicNavbar';
 
 // Animated number counter component
 const AnimatedStat = ({ value, label }) => {
@@ -34,6 +35,7 @@ export default function AboutPage() {
       </Head>
 
       <BackgroundElements />
+      <PublicNavbar />
 
       {/* Hero Section */}
       <section className="relative pt-16 sm:pt-24 pb-12 sm:pb-16 overflow-hidden">

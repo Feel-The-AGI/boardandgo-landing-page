@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import PublicNavbar from '../../components/common/PublicNavbar';
 import Footer from '../../components/common/Footer';
 import ScrollToTop from '../../components/common/ScrollToTop';
 import BackgroundElements from '../../components/common/BackgroundElements';
@@ -17,6 +18,7 @@ export default function PrivacyPage() {
       </Head>
 
       <BackgroundElements />
+      <PublicNavbar />
 
       <div className="relative pt-12 sm:pt-16 pb-16 sm:pb-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">

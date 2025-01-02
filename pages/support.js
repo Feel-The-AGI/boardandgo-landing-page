@@ -1,5 +1,6 @@
 import Head from 'next/head';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
+import PublicNavbar from '../components/common/PublicNavbar';
 import Footer from '../components/common/Footer';
 import ScrollToTop from '../components/common/ScrollToTop';
 import BackgroundElements from '../components/common/BackgroundElements';
@@ -20,16 +21,24 @@ const QuickHelp = ({ title, description, icon }) => (
 
 const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const contentRef = useRef(null);
+  const [height, setHeight] = useState(0);
+
+  useEffect(() => {
+    if (contentRef.current) {
+      setHeight(isOpen ? contentRef.current.scrollHeight : 0);
+    }
+  }, [isOpen]);
 
   return (
     <div className="border-b border-white/10">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between py-4 text-left"
+        className="w-full flex items-center justify-between py-4 text-left hover:text-[#7C5DFA] transition-colors duration-300"
       >
         <span className="font-medium">{question}</span>
         <svg
-          className={`w-5 h-5 transform transition-transform ${isOpen ? 'rotate-180' : ''}`}
+          className={`w-5 h-5 transform transition-transform duration-300 ease-in-out ${isOpen ? 'rotate-180' : ''}`}
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -37,8 +46,16 @@ const FAQItem = ({ question, answer }) => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
       </button>
-      <div className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-48' : 'max-h-0'}`}>
-        <p className="pb-4 text-gray-400">{answer}</p>
+      <div 
+        ref={contentRef}
+        className="overflow-hidden transition-all duration-500 ease-in-out"
+        style={{ height: height ? `${height}px` : '0px' }}
+      >
+        <p className="pb-4 text-gray-400 transition-opacity duration-300" 
+           style={{ opacity: isOpen ? 1 : 0 }}
+        >
+          {answer}
+        </p>
       </div>
     </div>
   );
@@ -53,6 +70,7 @@ export default function SupportPage() {
       </Head>
 
       <BackgroundElements />
+      <PublicNavbar />
 
       {/* Hero Section */}
       <section className="relative pt-12 sm:pt-16 md:pt-24 pb-8 sm:pb-12 overflow-hidden">

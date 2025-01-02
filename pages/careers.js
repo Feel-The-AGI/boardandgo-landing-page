@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
+import PublicNavbar from '../components/common/PublicNavbar';
 import Footer from '../components/common/Footer';
 import ScrollToTop from '../components/common/ScrollToTop';
 import BackgroundElements from '../components/common/BackgroundElements';
@@ -99,6 +100,7 @@ export default function CareersPage() {
       </Head>
 
       <BackgroundElements />
+      <PublicNavbar />
 
       {/* Hero Section */}
       <section className="relative pt-16 sm:pt-24 pb-12 sm:pb-16 overflow-hidden">

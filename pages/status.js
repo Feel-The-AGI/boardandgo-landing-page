@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { useState } from 'react';
+import PublicNavbar from '../components/common/PublicNavbar';
 import Footer from '../components/common/Footer';
 import ScrollToTop from '../components/common/ScrollToTop';
 import BackgroundElements from '../components/common/BackgroundElements';
@@ -82,6 +83,7 @@ export default function StatusPage() {
       </Head>
 
       <BackgroundElements />
+      <PublicNavbar />
 
       {/* Hero Section */}
       <section className="relative pt-12 sm:pt-16 md:pt-24 pb-8 sm:pb-12 overflow-hidden">

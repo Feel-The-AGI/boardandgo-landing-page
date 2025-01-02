@@ -7,6 +7,7 @@ import {
   PhoneIcon,
   MapPinIcon as LocationIcon 
 } from '@heroicons/react/24/outline';
+import PublicNavbar from '../../components/common/PublicNavbar';
 
 export default function TermsPage() {
   return (
@@ -17,6 +18,7 @@ export default function TermsPage() {
       </Head>
 
       <BackgroundElements />
+      <PublicNavbar />
 
       <div className="relative pt-12 sm:pt-16 pb-16 sm:pb-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">

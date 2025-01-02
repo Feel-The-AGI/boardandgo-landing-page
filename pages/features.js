@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
+import PublicNavbar from '../components/common/PublicNavbar';
 import Footer from '../components/common/Footer';
 import ScrollToTop from '../components/common/ScrollToTop';
 import BackgroundElements from '../components/common/BackgroundElements';
@@ -190,6 +191,7 @@ export default function FeaturesPage() {
       </Head>
 
       <BackgroundElements />
+      <PublicNavbar />
 
       {/* Hero Section */}
       <section className="relative pt-12 sm:pt-16 md:pt-24 pb-8 sm:pb-12 md:pb-16 overflow-hidden">

@@ -11,6 +11,7 @@ import Footer from '../components/common/Footer';
 import ScrollToTop from '../components/common/ScrollToTop';
 import BackgroundElements from '../components/common/BackgroundElements';
 import Image from 'next/image';
+import PublicNavbar from '../components/common/PublicNavbar';
 
 const BluePlane = ({ className }) => (
   <svg 
@@ -42,41 +43,10 @@ export default function HomePage() {
   return (
     <>
       <BackgroundElements />
+      <PublicNavbar />
       
       {/* Hero Section */}
       <section className="relative pt-8 sm:pt-16 md:pt-24 pb-12 sm:pb-16 md:pb-20 overflow-hidden">
-        {/* Navigation Bar */}
-        <div className="fixed top-0 left-0 right-0 h-16 px-4 sm:px-6 z-30 bg-background/80 backdrop-blur-sm border-b border-white/10">
-          <div className="max-w-7xl mx-auto h-full flex items-center justify-between">
-            {/* Logo */}
-            <div className="flex items-center">
-              <h1 className="text-xl sm:text-2xl font-bold">
-                <Link href="/" className="gradient-text">BoardAndGo</Link>
-              </h1>
-            </div>
-
-            {/* Desktop Auth Buttons */}
-            <div className="hidden sm:flex items-center gap-4">
-              <Link 
-                href="/auth/login"
-                className="text-sm text-gray-400 hover:text-white transition-colors"
-              >
-                Login
-              </Link>
-              <Link href="/auth/signup">
-                <button className="bg-[#7C5DFA] hover:bg-[#8F75FF] transition-colors px-4 py-2 rounded-full text-sm font-medium text-white">
-                  Get Started
-                </button>
-              </Link>
-            </div>
-
-            {/* Mobile Menu */}
-            <div className="block sm:hidden z-50">
-              <AviationMenu />
-            </div>
-          </div>
-        </div>
-
         {/* Hero Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center space-y-6 sm:space-y-8 pt-16 sm:pt-20">
