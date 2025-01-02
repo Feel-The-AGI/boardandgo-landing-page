@@ -47,14 +47,14 @@ const FeatureShowcase = ({ title, description, visual, isReversed = false }) => 
 };
 
 const AICallSimulation = () => (
-  <div className="glass-effect rounded-2xl p-6 space-y-4">
+  <div className="glass-effect rounded-2xl p-4 sm:p-6 space-y-3 sm:space-y-4">
     <div className="flex items-center gap-3">
-      <div className="w-8 h-8 rounded-full bg-[#7C5DFA] flex items-center justify-center">
+      <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-[#7C5DFA] flex items-center justify-center">
         <span className="text-sm">AI</span>
       </div>
       <div className="flex-1">
-        <p className="text-sm text-gray-400">Amy from BoardAndGo</p>
-        <p className="text-white">Your flight to Paris has arrived at Gate B15, which is about 12 minutes walk from your current location. Boarding begins in 45 minutes.</p>
+        <p className="text-xs sm:text-sm text-gray-400">Amy from BoardAndGo</p>
+        <p className="text-sm sm:text-base text-white">Your flight to Paris has arrived at Gate B15, which is about 12 minutes walk from your current location. Boarding begins in 45 minutes.</p>
       </div>
     </div>
     <div className="flex items-center gap-3 opacity-60">
@@ -79,13 +79,13 @@ const AICallSimulation = () => (
 );
 
 const LiveFlightCard = () => (
-  <div className="glass-effect rounded-2xl p-6">
-    <div className="flex justify-between items-start mb-6">
+  <div className="glass-effect rounded-2xl p-4 sm:p-6">
+    <div className="flex justify-between items-start mb-4 sm:mb-6">
       <div>
-        <h4 className="text-lg font-semibold">AF023 • Paris</h4>
-        <p className="text-sm text-gray-400">Airbus A350-900</p>
+        <h4 className="text-base sm:text-lg font-semibold">AF023 • Paris</h4>
+        <p className="text-xs sm:text-sm text-gray-400">Airbus A350-900</p>
       </div>
-      <span className="px-3 py-1 rounded-full bg-green-500/10 text-green-400 text-sm">On Time</span>
+      <span className="px-2 sm:px-3 py-1 rounded-full bg-green-500/10 text-green-400 text-xs sm:text-sm">On Time</span>
     </div>
     <div className="space-y-4">
       <div className="relative">
@@ -186,35 +186,31 @@ export default function FeaturesPage() {
     <>
       <Head>
         <title>Features | BoardAndGo</title>
-        <meta 
-          name="description" 
-          content="Experience the future of flight tracking with BoardAndGo's AI-powered features. Real-time updates, smart connections, and human-like assistance." 
-        />
+        <meta name="description" content="Experience the future of flight tracking with BoardAndGo's AI-powered features." />
       </Head>
 
       <BackgroundElements />
 
       {/* Hero Section */}
-      <section className="relative pt-16 sm:pt-24 pb-12 sm:pb-16 overflow-hidden">
+      <section className="relative pt-12 sm:pt-16 md:pt-24 pb-8 sm:pb-12 md:pb-16 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center space-y-8 relative">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
+          <div className="text-center space-y-6 sm:space-y-8 relative">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Travel With
               <span className="gradient-text block mt-2">Peace of Mind</span>
             </h1>
             
-            <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto">
-              Let our AI agents handle the complexities of flight tracking while you focus on what matters. 
-              From takeoff to landing, we've got your back.
+            <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto px-4">
+              Let our AI agents handle the complexities of flight tracking while you focus on what matters.
             </p>
           </div>
         </div>
       </section>
 
       {/* Features Showcase */}
-      <section className="py-12 sm:py-16 relative">
+      <section className="py-8 sm:py-12 md:py-16 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="space-y-24">
+          <div className="space-y-16 sm:space-y-24">
             {features.map((feature, index) => (
               <FeatureShowcase
                 key={feature.title}
@@ -227,9 +223,9 @@ export default function FeaturesPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-12 sm:py-16 relative">
+      <section className="py-8 sm:py-12 md:py-16 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
             {[
               { value: '98%', label: 'Tracking Accuracy' },
               { value: '78%', label: 'Fewer Missed Connections' },
@@ -237,8 +233,8 @@ export default function FeaturesPage() {
               { value: '2.3M+', label: 'Hours of Anxiety Saved' }
             ].map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold gradient-text">{stat.value}</div>
-                <div className="text-sm text-gray-400 mt-2">{stat.label}</div>
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold gradient-text">{stat.value}</div>
+                <div className="text-xs sm:text-sm text-gray-400 mt-1 sm:mt-2">{stat.label}</div>
               </div>
             ))}
           </div>
