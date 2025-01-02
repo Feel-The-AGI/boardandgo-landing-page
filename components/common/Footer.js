@@ -11,7 +11,7 @@ export default function Footer() {
       
       <div className="max-w-7xl mx-auto py-12 sm:py-16 px-4 sm:px-6 lg:px-8 relative">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 mb-12">
           {/* Logo & Contact */}
           <div className="col-span-1 sm:col-span-2 lg:col-span-1 space-y-6">
             <h3 className="text-xl sm:text-2xl font-bold gradient-text hover:scale-105 transition-transform cursor-pointer">
