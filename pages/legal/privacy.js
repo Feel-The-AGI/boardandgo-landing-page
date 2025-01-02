@@ -27,10 +27,10 @@ export default function PrivacyPage() {
           <div className="space-y-12">
             <section>
               <div className="glass-effect rounded-2xl p-6 sm:p-8">
-                <h2 className="text-2xl font-bold mb-6 gradient-text">1. Data Collection</h2>
+                <h2 className="text-2xl font-bold mb-6 gradient-text">Data Collection</h2>
                 <div className="space-y-6">
                   <div className="bg-white/5 rounded-xl p-6">
-                    <h3 className="text-xl font-semibold mb-4">1.1 Essential Flight Data</h3>
+                    <h3 className="text-xl font-semibold mb-4">Essential Flight Data</h3>
                     <p>We collect:</p>
                     <ul className="list-disc pl-6 space-y-2 text-gray-300">
                       <li>Flight itineraries and booking references</li>
@@ -42,7 +42,7 @@ export default function PrivacyPage() {
                   </div>
 
                   <div className="bg-white/5 rounded-xl p-6">
-                    <h3 className="text-xl font-semibold mb-4">1.2 Personal Information</h3>
+                    <h3 className="text-xl font-semibold mb-4">Personal Information</h3>
                     <p>To provide personalized service, we collect:</p>
                     <ul className="list-disc pl-6 space-y-2 text-gray-300">
                       <li>Name and contact details</li>
@@ -58,7 +58,7 @@ export default function PrivacyPage() {
 
             <section>
               <div className="glass-effect rounded-2xl p-6 sm:p-8">
-                <h2 className="text-2xl font-bold mb-6 gradient-text">2. Use of Information</h2>
+                <h2 className="text-2xl font-bold mb-6 gradient-text">Use of Information</h2>
                 <p>Your data enables us to:</p>
                 <ul className="list-disc pl-6 space-y-2 text-gray-300">
                   <li>Track and monitor your flights in real-time</li>
@@ -73,7 +73,7 @@ export default function PrivacyPage() {
 
             <section>
               <div className="glass-effect rounded-2xl p-6 sm:p-8">
-                <h2 className="text-2xl font-bold mb-6 gradient-text">3. AI Voice System</h2>
+                <h2 className="text-2xl font-bold mb-6 gradient-text">AI Voice System</h2>
                 <p>Our AI voice system "Amy":</p>
                 <ul className="list-disc pl-6 space-y-2 text-gray-300">
                   <li>Uses voice recognition to understand responses</li>
@@ -90,7 +90,7 @@ export default function PrivacyPage() {
 
             <section>
               <div className="glass-effect rounded-2xl p-6 sm:p-8">
-                <h2 className="text-2xl font-bold mb-6 gradient-text">4. Data Sharing</h2>
+                <h2 className="text-2xl font-bold mb-6 gradient-text">Data Sharing</h2>
                 <p>We share data with:</p>
                 <ul className="list-disc pl-6 space-y-2 text-gray-300">
                   <li>Airlines (for flight status verification)</li>
@@ -106,7 +106,7 @@ export default function PrivacyPage() {
 
             <section>
               <div className="glass-effect rounded-2xl p-6 sm:p-8">
-                <h2 className="text-2xl font-bold mb-6 gradient-text">5. Data Security</h2>
+                <h2 className="text-2xl font-bold mb-6 gradient-text">Data Security</h2>
                 <p>We protect your data through:</p>
                 <ul className="list-disc pl-6 space-y-2 text-gray-300">
                   <li>End-to-end encryption for all transmissions</li>
@@ -120,7 +120,7 @@ export default function PrivacyPage() {
 
             <section>
               <div className="glass-effect rounded-2xl p-6 sm:p-8">
-                <h2 className="text-2xl font-bold mb-6 gradient-text">6. User Rights</h2>
+                <h2 className="text-2xl font-bold mb-6 gradient-text">User Rights</h2>
                 <p>You have the right to:</p>
                 <ul className="list-disc pl-6 space-y-2 text-gray-300">
                   <li>Access your personal data</li>
@@ -135,7 +135,7 @@ export default function PrivacyPage() {
 
             <section>
               <div className="glass-effect rounded-2xl p-6 sm:p-8">
-                <h2 className="text-2xl font-bold mb-6 gradient-text">7. Data Retention</h2>
+                <h2 className="text-2xl font-bold mb-6 gradient-text">Data Retention</h2>
                 <p>We retain data for:</p>
                 <ul className="list-disc pl-6 space-y-2 text-gray-300">
                   <li>Active accounts: Duration of account activity</li>
@@ -148,7 +148,7 @@ export default function PrivacyPage() {
 
             <section>
               <div className="glass-effect rounded-2xl p-6 sm:p-8">
-                <h2 className="text-2xl font-bold mb-6 gradient-text">8. International Transfers</h2>
+                <h2 className="text-2xl font-bold mb-6 gradient-text">International Transfers</h2>
                 <p>
                   As a global service, we may transfer data across borders. All international transfers 
                   comply with relevant data protection laws and use appropriate safeguards.
@@ -158,7 +158,7 @@ export default function PrivacyPage() {
 
             <section>
               <div className="glass-effect rounded-2xl p-6 sm:p-8">
-                <h2 className="text-2xl font-bold mb-6 gradient-text">9. Children's Privacy</h2>
+                <h2 className="text-2xl font-bold mb-6 gradient-text">Children's Privacy</h2>
                 <p>
                   BoardAndGo does not knowingly collect data from children under 13. Parents or guardians 
                   should manage flight tracking for young travelers.
@@ -168,7 +168,7 @@ export default function PrivacyPage() {
 
             <section>
               <div className="glass-effect rounded-2xl p-6 sm:p-8">
-                <h2 className="text-2xl font-bold mb-6 gradient-text">10. Contact Information</h2>
+                <h2 className="text-2xl font-bold mb-6 gradient-text">Contact Information</h2>
                 <p>For privacy concerns:</p>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
                   <li className="glass-effect p-4 rounded-xl flex items-center gap-3">
