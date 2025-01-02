@@ -83,9 +83,9 @@ export default function Footer() {
 function getLinksForSection(section) {
   switch (section) {
     case 'Company':
-      return ['About', 'Blog', 'Careers', 'Press'];
+      return ['About', 'Careers'];
     case 'Product':
-      return ['Features', 'Pricing', 'API', 'Documentation'];
+      return ['Features', 'Pricing'];
     case 'Help Center':
       return ['Support', 'Terms', 'Privacy', 'Cookie Policy'];
     default:

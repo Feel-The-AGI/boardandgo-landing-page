@@ -86,25 +86,30 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(
-    to bottom,
-    rgb(var(--accent-purple-rgb) / 0.5),
-    rgb(var(--accent-blue-rgb) / 0.5)
-  );
+  background: rgba(124, 93, 250, 0.3);
   border-radius: 5px;
-  border: 2px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(
-    to bottom,
-    rgb(var(--accent-purple-rgb) / 0.8),
-    rgb(var(--accent-blue-rgb) / 0.8)
-  );
+  background: rgba(124, 93, 250, 0.5);
 }
 
 /* Firefox Scrollbar */
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--accent-purple) rgba(255, 255, 255, 0.05);
+  scrollbar-color: rgba(124, 93, 250, 0.3) rgba(255, 255, 255, 0.05);
+}
+
+/* Smooth Scroll for the whole site */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optional: Hide scrollbar on mobile */
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
 }
