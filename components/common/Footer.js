@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Link from 'next/link';
 
 export default function Footer() {
   const [hoveredSocial, setHoveredSocial] = useState(null);
@@ -52,15 +53,15 @@ export default function Footer() {
                 {section}
               </h4>
               <ul className="space-y-2 sm:space-y-3">
-                {getLinksForSection(section).map((item) => (
-                  <li key={item}>
-                    <a 
-                      href="#" 
+                {getLinksForSection(section).map((link) => (
+                  <li key={link.name}>
+                    <Link 
+                      href={link.href}
                       className="text-sm text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-1 flex items-center gap-2 group"
                     >
                       <span className="w-1 h-1 rounded-full bg-accent-purple/50 group-hover:scale-150 transition-transform" />
-                      {item}
-                    </a>
+                      {link.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -83,17 +84,28 @@ export default function Footer() {
 function getLinksForSection(section) {
   switch (section) {
     case 'Company':
-      return ['About', 'Careers'];
+      return [
+        { name: 'About', href: '/about' },
+        { name: 'Careers', href: '/careers' }
+      ];
     case 'Product':
-      return ['Features', 'Pricing'];
+      return [
+        { name: 'Features', href: '/features' },
+        { name: 'Pricing', href: '/pricing' }
+      ];
     case 'Help Center':
-      return ['Support', 'Terms', 'Privacy', 'Cookie Policy'];
+      return [
+        { name: 'Support', href: '#' },
+        { name: 'Terms', href: '#' },
+        { name: 'Privacy', href: '#' },
+        { name: 'Cookie Policy', href: '#' }
+      ];
     default:
       return [];
   }
 }
 
-// Icons components...
+// Icons components
 const MailIcon = ({ className }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />

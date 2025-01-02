@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const MenuIcon = () => (
   <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor">
@@ -14,13 +15,14 @@ const MenuIcon = () => (
 
 export default function AviationMenu() {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
 
   const menuItems = [
     { name: 'Home', href: '/' },
-    { name: 'About Us', href: '/about' },
     { name: 'Features', href: '/features' },
     { name: 'Pricing', href: '/pricing' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'About', href: '/about' },
+    { name: 'Careers', href: '/careers' },
   ];
 
   return (
