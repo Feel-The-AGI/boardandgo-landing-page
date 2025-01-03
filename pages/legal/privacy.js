@@ -15,6 +15,17 @@ export default function PrivacyPage() {
       <Head>
         <title>Privacy Policy | BoardAndGo</title>
         <meta name="description" content="Learn how BoardAndGo protects and handles your data while providing flight tracking and AI assistance services." />
++       
++       {/* Open Graph Meta Tags */}
++       <meta property="og:url" content="https://boardandgo.com/legal/privacy" />
++       <meta property="og:title" content="Privacy Policy | BoardAndGo" />
++       <meta property="og:description" content="Learn how BoardAndGo protects and handles your data while providing flight tracking and AI assistance services." />
++       <meta property="og:image" content="https://boardandgo.com/og-image-privacy.jpg" />
++       
++       {/* Twitter Meta Tags */}
++       <meta name="twitter:title" content="Privacy Policy | BoardAndGo" />
++       <meta name="twitter:description" content="Learn how BoardAndGo protects and handles your data while providing flight tracking and AI assistance services." />
++       <meta name="twitter:image" content="https://boardandgo.com/og-image-privacy.jpg" />
       </Head>
 
       <BackgroundElements />

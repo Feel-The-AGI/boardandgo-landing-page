@@ -12,6 +12,7 @@ import ScrollToTop from '../components/common/ScrollToTop';
 import BackgroundElements from '../components/common/BackgroundElements';
 import Image from 'next/image';
 import PublicNavbar from '../components/common/PublicNavbar';
+import { Head } from 'next/head';
 
 const BluePlane = ({ className }) => (
   <svg 
@@ -42,6 +43,21 @@ export default function HomePage() {
 
   return (
     <>
+      <Head>
+        <title>BoardAndGo - Your AI Travel Partner</title>
+        <meta name="description" content="AI Agents that handle your travel for you, so you can just Board-and-Go!" />
+        
+        {/* Open Graph Meta Tags */}
+        <meta property="og:url" content="https://boardandgo.com" />
+        <meta property="og:title" content="BoardAndGo - Your AI Travel Partner" />
+        <meta property="og:description" content="AI Agents that handle your travel for you, so you can just Board-and-Go!" />
+        <meta property="og:image" content="https://boardandgo.com/og-image.jpg" />
+        
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:title" content="BoardAndGo - Your AI Travel Partner" />
+        <meta name="twitter:description" content="AI Agents that handle your travel for you, so you can just Board-and-Go!" />
+        <meta name="twitter:image" content="https://boardandgo.com/og-image.jpg" />
+      </Head>
       <BackgroundElements />
       <PublicNavbar />
       

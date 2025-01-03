@@ -15,6 +15,13 @@ export default function TermsPage() {
       <Head>
         <title>Terms & Conditions | BoardAndGo</title>
         <meta name="description" content="Terms and conditions for using BoardAndGo's flight tracking and AI assistance services." />
+        <meta property="og:url" content="https://boardandgo.com/legal/terms" />
+        <meta property="og:title" content="Terms & Conditions | BoardAndGo" />
+        <meta property="og:description" content="Terms and conditions for using BoardAndGo's flight tracking and AI assistance services." />
+        <meta property="og:image" content="https://boardandgo.com/og-image-terms.jpg" />
+        <meta name="twitter:title" content="Terms & Conditions | BoardAndGo" />
+        <meta name="twitter:description" content="Terms and conditions for using BoardAndGo's flight tracking and AI assistance services." />
+        <meta name="twitter:image" content="https://boardandgo.com/og-image-terms.jpg" />
       </Head>
 
       <BackgroundElements />

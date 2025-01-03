@@ -96,7 +96,18 @@ export default function CareersPage() {
     <>
       <Head>
         <title>Careers | BoardAndGo</title>
-        <meta name="description" content="Join BoardAndGo and help revolutionize flight tracking with AI innovation. Explore our open positions and become part of our mission." />
+        <meta name="description" content="Join BoardAndGo and help revolutionize flight tracking with AI innovation." />
+        
+        {/* Open Graph Meta Tags */}
+        <meta property="og:url" content="https://boardandgo.com/careers" />
+        <meta property="og:title" content="Careers | BoardAndGo" />
+        <meta property="og:description" content="Join BoardAndGo and help revolutionize flight tracking with AI innovation." />
+        <meta property="og:image" content="https://boardandgo.com/og-image-careers.jpg" />
+        
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:title" content="Careers | BoardAndGo" />
+        <meta name="twitter:description" content="Join BoardAndGo and help revolutionize flight tracking with AI innovation." />
+        <meta name="twitter:image" content="https://boardandgo.com/og-image-careers.jpg" />
       </Head>
 
       <BackgroundElements />

@@ -188,6 +188,17 @@ export default function FeaturesPage() {
       <Head>
         <title>Features | BoardAndGo</title>
         <meta name="description" content="Experience the future of flight tracking with BoardAndGo's AI-powered features." />
+        
+        {/* Open Graph Meta Tags */}
+        <meta property="og:url" content="https://boardandgo.com/features" />
+        <meta property="og:title" content="Features | BoardAndGo" />
+        <meta property="og:description" content="Experience the future of flight tracking with BoardAndGo's AI-powered features." />
+        <meta property="og:image" content="https://boardandgo.com/og-image-features.jpg" />
+        
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:title" content="Features | BoardAndGo" />
+        <meta name="twitter:description" content="Experience the future of flight tracking with BoardAndGo's AI-powered features." />
+        <meta name="twitter:image" content="https://boardandgo.com/og-image-features.jpg" />
       </Head>
 
       <BackgroundElements />

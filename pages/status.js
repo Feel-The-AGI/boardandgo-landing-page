@@ -80,6 +80,17 @@ export default function StatusPage() {
           name="description" 
           content="Check the current status of BoardAndGo's services and systems." 
         />
+        
+        {/* Open Graph Meta Tags */}
+        <meta property="og:url" content="https://boardandgo.com/status" />
+        <meta property="og:title" content="System Status | BoardAndGo" />
+        <meta property="og:description" content="Check the current status of BoardAndGo's services and systems." />
+        <meta property="og:image" content="https://boardandgo.com/og-image-status.jpg" />
+        
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:title" content="System Status | BoardAndGo" />
+        <meta name="twitter:description" content="Check the current status of BoardAndGo's services and systems." />
+        <meta name="twitter:image" content="https://boardandgo.com/og-image-status.jpg" />
       </Head>
 
       <BackgroundElements />

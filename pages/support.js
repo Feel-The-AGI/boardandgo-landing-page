@@ -67,6 +67,17 @@ export default function SupportPage() {
       <Head>
         <title>Support | BoardAndGo</title>
         <meta name="description" content="Get help with your BoardAndGo account and flight tracking needs." />
+        
+        {/* Open Graph Meta Tags */}
+        <meta property="og:url" content="https://boardandgo.com/support" />
+        <meta property="og:title" content="Support | BoardAndGo" />
+        <meta property="og:description" content="Get help with your BoardAndGo account and flight tracking needs." />
+        <meta property="og:image" content="https://boardandgo.com/og-image-support.jpg" />
+        
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:title" content="Support | BoardAndGo" />
+        <meta name="twitter:description" content="Get help with your BoardAndGo account and flight tracking needs." />
+        <meta name="twitter:image" content="https://boardandgo.com/og-image-support.jpg" />
       </Head>
 
       <BackgroundElements />

@@ -158,10 +158,18 @@ export default function PricingPage() {
     <>
       <Head>
         <title>Pricing | BoardAndGo</title>
-        <meta 
-          name="description" 
-          content="Choose the perfect plan for your travel needs. From basic flight tracking to advanced AI assistance, we've got you covered." 
-        />
+        <meta name="description" content="Choose the perfect plan for your travel needs. From basic flight tracking to advanced AI assistance." />
+        
+        {/* Open Graph Meta Tags */}
+        <meta property="og:url" content="https://boardandgo.com/pricing" />
+        <meta property="og:title" content="Pricing | BoardAndGo" />
+        <meta property="og:description" content="Choose the perfect plan for your travel needs. From basic flight tracking to advanced AI assistance." />
+        <meta property="og:image" content="https://boardandgo.com/og-image-pricing.jpg" />
+        
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:title" content="Pricing | BoardAndGo" />
+        <meta name="twitter:description" content="Choose the perfect plan for your travel needs. From basic flight tracking to advanced AI assistance." />
+        <meta name="twitter:image" content="https://boardandgo.com/og-image-pricing.jpg" />
       </Head>
 
       <BackgroundElements />
