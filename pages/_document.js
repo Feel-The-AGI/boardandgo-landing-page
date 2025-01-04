@@ -4,7 +4,8 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.svg" type="image/svg+xml" />
+        <link rel="alternate icon" href="/favicon.ico" />
         <meta property="og:site_name" content="BoardAndGo" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />

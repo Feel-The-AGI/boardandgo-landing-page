@@ -12,7 +12,7 @@ import ScrollToTop from '../components/common/ScrollToTop';
 import BackgroundElements from '../components/common/BackgroundElements';
 import Image from 'next/image';
 import PublicNavbar from '../components/common/PublicNavbar';
-import { Head } from 'next/head';
+import Head from 'next/head';
 
 const BluePlane = ({ className }) => (
   <svg 
