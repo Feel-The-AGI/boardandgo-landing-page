@@ -4,6 +4,10 @@ const nextConfig = {
   images: {
     domains: [],
   },
+  webpack: (config) => {
+    config.cache = false;
+    return config;
+  },
 };
 
 export default nextConfig;
