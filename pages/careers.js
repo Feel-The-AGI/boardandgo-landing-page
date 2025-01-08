@@ -75,19 +75,50 @@ const JobCard = ({ title, type, location, description, requirements, href = "#" 
 export default function CareersPage() {
   const openPositions = [
     {
-      title: "Frontend Developer (Next.js)",
+      title: "Senior Frontend Developer (Next.js)",
       type: "Full-time",
       location: "Remote",
-      description: "We're looking for a talented Frontend Developer with strong Next.js experience to help build our revolutionary flight tracking platform. You'll be working on creating intuitive, real-time interfaces that help travelers stay informed and stress-free.",
+      description: "Join our frontend team to build beautiful, responsive user interfaces for our flight tracking platform.",
       requirements: [
-        "3+ years of experience with React and Next.js",
-        "Strong understanding of modern JavaScript (ES6+)",
-        "Experience with real-time data visualization and WebSocket integrations",
-        "Familiarity with Tailwind CSS and modern CSS practices",
-        "Knowledge of TypeScript and testing frameworks",
-        "Experience with responsive design and mobile-first approaches",
-        "Strong problem-solving skills and attention to detail",
-        "Excellent communication skills and ability to work in a remote team"
+        "5+ years of experience with React and Next.js",
+        "Strong TypeScript skills",
+        "Experience with Tailwind CSS",
+        "Understanding of web performance optimization",
+        "Experience with real-time data visualization"
+      ]
+    },
+    {
+      title: "Senior AI Engineer (LangChain/LangGraph)",
+      type: "Full-time",
+      location: "Remote",
+      description: "Help build and optimize our AI agents that power proactive flight monitoring and passenger assistance.",
+      requirements: [
+        "5+ years of experience in ML/AI engineering",
+        "Strong expertise in LangChain and LangGraph",
+        "Strong fundamental and practical knowledge of AI agents",
+        "Experience building production-grade LLM applications",
+        "Proficiency in Python and async programming",
+        "Understanding of RAG (Retrieval Augmented Generation)",
+        "Experience with vector databases (e.g., Pinecone, Weaviate)",
+        "Knowledge of prompt engineering and LLM fine-tuning",
+        "Familiarity with real-time systems and event-driven architectures"
+      ]
+    },
+    {
+      title: "Senior Backend Engineer (Python/FastAPI)",
+      type: "Full-time",
+      location: "Remote",
+      description: "Design and build scalable microservices architecture for our flight tracking platform using Python and FastAPI.",
+      requirements: [
+        "5+ years of experience in backend development with Python",
+        "Strong expertise in FastAPI and async programming",
+        "Experience building and maintaining microservices architecture",
+        "Proficiency in SQL and NoSQL databases",
+        "Experience with message queues (RabbitMQ, Redis)",
+        "Strong understanding of RESTful APIs and WebSockets",
+        "AWS experience (Elastic Beanstalk, ECS, Lambda) is a plus",
+        "Experience with Docker and Kubernetes is a plus",
+        "Understanding of infrastructure as code and CI/CD practices"
       ]
     }
   ];
