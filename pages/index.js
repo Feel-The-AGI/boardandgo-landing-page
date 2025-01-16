@@ -26,19 +26,26 @@ const BluePlane = ({ className }) => (
 
 export default function HomePage() {
   const router = useRouter();
-  const [flightNumber, setFlightNumber] = useState('');
+  const [email, setEmail] = useState('');
   const [isSearching, setIsSearching] = useState(false);
+  const [showToast, setShowToast] = useState(false);
 
-  const handleTrackFlight = () => {
-    if (!flightNumber) return;
+  const handleJoinWaitlist = () => {
+    if (!email) return;
     
     setIsSearching(true);
     
-    // After animation completes, navigate or show results
+    // After animation completes, show toast
     setTimeout(() => {
-      // Navigate to flight tracking page or show results
-      console.log('Tracking flight:', flightNumber);
-    }, 1200); // Match new animation duration
+      setShowToast(true);
+      setIsSearching(false);
+      setEmail('');
+      
+      // Hide toast after 3 seconds
+      setTimeout(() => {
+        setShowToast(false);
+      }, 3000);
+    }, 1200);
   };
 
   return (
@@ -85,17 +92,17 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row gap-2 sm:gap-0 relative">
                 <div className="relative flex-1">
                   <input
-                    type="text"
-                    placeholder="Enter flight number..."
-                    value={flightNumber}
-                    onChange={(e) => setFlightNumber(e.target.value)}
+                    type="email"
+                    placeholder="Enter your email to join the waitlist..."
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     className="w-full h-12 sm:h-14 bg-[#0A0A0B] rounded-full sm:rounded-r-none px-4 sm:px-6 
                       text-sm sm:text-base text-white placeholder-gray-400
                       border-0 focus:ring-0 focus:outline-none"
                   />
                 </div>
                 <button
-                  onClick={handleTrackFlight}
+                  onClick={handleJoinWaitlist}
                   disabled={isSearching}
                   className="h-12 sm:h-14 bg-[#7C5DFA] hover:bg-[#8F75FF] transition-colors 
                     px-6 sm:px-8 text-sm sm:text-base text-white font-medium 
@@ -108,7 +115,7 @@ export default function HomePage() {
                       ${isSearching ? 'opacity-0 scale-0' : 'opacity-100 scale-100'}
                     `}
                   >
-                    Track Flight
+                    Join Waitlist
                   </span>
                   
                   {/* Animated Plane */}
@@ -132,6 +139,17 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Toast Notification */}
+      <div 
+        className={`
+          fixed bottom-4 right-4 bg-[#7C5DFA] text-white px-6 py-4 rounded-lg shadow-lg
+          transform transition-all duration-300 z-50
+          ${showToast ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0 pointer-events-none'}
+        `}
+      >
+        <p className="font-medium">Thanks for joining our waitlist! We'll notify you when we launch.</p>
+      </div>
 
       {/* Features Section */}
       <section className="py-12 sm:py-16 md:py-20 relative px-4">
