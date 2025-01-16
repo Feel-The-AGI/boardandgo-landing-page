@@ -305,18 +305,43 @@ export default function HomePage() {
                 Experience seamless flight tracking with real-time updates and AI-powered insights.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/auth/signup">
+                <Button
+                  variant="primary"
+                  size="lg"
+                  className="group w-full sm:w-auto"
+                  disabled
+                >
+                  Coming Soon
+                  <span className="group-hover:translate-x-1 transition-transform duration-200">
+                    →
+                  </span>
+                </Button>
+                <Link href="/about">
                   <Button
-                    variant="primary"
+                    variant="secondary"
                     size="lg"
-                    className="group w-full sm:w-auto"
+                    className="w-full sm:w-auto"
                   >
-                    Get Started
-                    <span className="group-hover:translate-x-1 transition-transform duration-200">
-                      →
-                    </span>
+                    Learn More
                   </Button>
                 </Link>
+              </div>
+            </div>
+
+            {/* Mobile/Tablet CTA Buttons */}
+            <div className="lg:hidden flex flex-col sm:flex-row gap-4 mt-8 order-3">
+              <Button
+                variant="primary"
+                size="lg"
+                className="group w-full"
+                disabled
+              >
+                Coming Soon
+                <span className="group-hover:translate-x-1 transition-transform duration-200">
+                  →
+                </span>
+              </Button>
+              <Link href="/about" className="w-full sm:w-auto">
                 <Button
                   variant="secondary"
                   size="lg"
@@ -324,30 +349,7 @@ export default function HomePage() {
                 >
                   Learn More
                 </Button>
-              </div>
-            </div>
-
-            {/* Mobile/Tablet CTA Buttons */}
-            <div className="lg:hidden flex flex-col sm:flex-row gap-4 mt-8 order-3">
-              <Link href="/auth/signup" className="w-full sm:w-auto">
-                <Button
-                  variant="primary"
-                  size="lg"
-                  className="group w-full"
-                >
-                  Get Started
-                  <span className="group-hover:translate-x-1 transition-transform duration-200">
-                    →
-                  </span>
-                </Button>
               </Link>
-              <Button
-                variant="secondary"
-                size="lg"
-                className="w-full sm:w-auto"
-              >
-                Learn More
-              </Button>
             </div>
           </div>
         </div>
@@ -372,22 +374,24 @@ export default function HomePage() {
               From gate changes to delay predictions, we've got you covered.
             </p>
             <div className="flex flex-col gap-4 max-w-xs mx-auto">
-              <Link href="/auth/signup" className="w-full">
-                <button className="w-full h-[56px] bg-[#7C5DFA] hover:bg-[#8F75FF] 
+              <button 
+                className="w-full h-[56px] bg-[#7C5DFA] hover:bg-[#8F75FF] 
                   transition-colors rounded-[28px] text-white font-medium text-sm
                   flex items-center justify-center gap-2 group"
+                disabled
+              >
+                Coming Soon
+                <span className="transform group-hover:translate-x-1 transition-transform">
+                  →
+                </span>
+              </button>
+              <Link href="/features">
+                <button className="w-full h-[56px] bg-[#1E1E1E] hover:bg-[#2A2A2A] 
+                  transition-colors rounded-[28px] text-white font-medium text-sm"
                 >
-                  Get Started Free
-                  <span className="transform group-hover:translate-x-1 transition-transform">
-                    →
-                  </span>
+                  Learn More
                 </button>
               </Link>
-              <button className="w-full h-[56px] bg-[#1E1E1E] hover:bg-[#2A2A2A] 
-                transition-colors rounded-[28px] text-white font-medium text-sm"
-              >
-                Schedule Demo
-              </button>
             </div>
           </div>
         </div>
