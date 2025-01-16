@@ -29,23 +29,62 @@ export default function HomePage() {
   const [email, setEmail] = useState('');
   const [isSearching, setIsSearching] = useState(false);
   const [showToast, setShowToast] = useState(false);
+  const [toastMessage, setToastMessage] = useState('');
+  const [toastType, setToastType] = useState('success');
 
-  const handleJoinWaitlist = () => {
+  const handleJoinWaitlist = async () => {
     if (!email) return;
     
     setIsSearching(true);
-    
-    // After animation completes, show toast
-    setTimeout(() => {
+
+    try {
+      // Get user's location data
+      const locationRes = await fetch('https://ipapi.co/json/');
+      const locationData = await locationRes.json();
+
+      // Prepare location data
+      const location = {
+        continent: locationData.continent_code,
+        country: locationData.country_name,
+        region: locationData.region,
+        city: locationData.city,
+        latitude: locationData.latitude,
+        longitude: locationData.longitude
+      };
+
+      // Submit to our API
+      const res = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          location
+        }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.message || 'Something went wrong');
+      }
+
+      setToastType('success');
+      setToastMessage('Thanks for joining our waitlist! We\'ll notify you when we launch.');
+      setEmail('');
+    } catch (error) {
+      setToastType('error');
+      setToastMessage(error.message || 'Failed to join waitlist. Please try again.');
+    } finally {
       setShowToast(true);
       setIsSearching(false);
-      setEmail('');
       
       // Hide toast after 3 seconds
       setTimeout(() => {
         setShowToast(false);
       }, 3000);
-    }, 1200);
+    }
   };
 
   return (
@@ -143,12 +182,14 @@ export default function HomePage() {
       {/* Toast Notification */}
       <div 
         className={`
-          fixed bottom-4 right-4 bg-[#7C5DFA] text-white px-6 py-4 rounded-lg shadow-lg
+          fixed bottom-4 right-4 px-6 py-4 rounded-lg shadow-lg
           transform transition-all duration-300 z-50
           ${showToast ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0 pointer-events-none'}
+          ${toastType === 'success' ? 'bg-[#7C5DFA]' : 'bg-red-500'}
+          text-white
         `}
       >
-        <p className="font-medium">Thanks for joining our waitlist! We'll notify you when we launch.</p>
+        <p className="font-medium">{toastMessage}</p>
       </div>
 
       {/* Features Section */}
