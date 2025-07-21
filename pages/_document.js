@@ -11,6 +11,22 @@ export default function Document() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@boardandgo" />
         <meta name="theme-color" content="#7C5DFA" />
+        {/* Travelpayout ownership verification script */}
+        <script
+          data-noptimize="1"
+          data-cfasync="false"
+          data-wpfc-render="false"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function () {
+                  var script = document.createElement(\"script\");
+                  script.async = 1;
+                  script.src = 'https://mn-tz.com/NDQwMDY2.js?t=440066';
+                  document.head.appendChild(script);
+              })();
+            `,
+          }}
+        />
       </Head>
       <body>
         <Main />
