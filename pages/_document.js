@@ -11,7 +11,7 @@ export default function Document() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@boardandgo" />
         <meta name="theme-color" content="#7C5DFA" />
-        {/* Travelpayout ownership verification script */}
+        {/* Travelpayout ownership verification script  */}
         <script
           data-noptimize="1"
           data-cfasync="false"
